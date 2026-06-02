@@ -1,8 +1,8 @@
 export default {
   base: '/ComfyUI_Workflow-DepthFrom360Videos/',
-  build: {
-    rolldownOptions: {
-      external: ['three-6dof']
+  resolve: {
+    alias: {
+      'three-6dof': new URL('../THREE.SixDOF/dist/index.js', import.meta.url).pathname
     }
   }
 };
