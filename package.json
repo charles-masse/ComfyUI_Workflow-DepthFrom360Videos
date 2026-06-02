@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "three": "^0.184.0",
-    "three-6dof": "file:../THREE.SixDOF"
+    "three-6dof": "github:charles-masse/THREE.SixDOF"
   },
   "devDependencies": {
     "vite": "^8.0.14"
