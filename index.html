@@ -41,20 +41,17 @@
             const scene = new THREE.Scene();
 
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 1000);
-            // camera.position.z = 0.1;
 
             const controls = new OrbitControls(camera, renderer.domElement);
-            camera.position.set(0, 5, 25);
+            camera.position.set(0, 2, 10);
             controls.autoRotate = true;
 
             const loader = new THREE.TextureLoader();
 
             const colorTexture = loader.load('color.png');
-            colorTexture.format = THREE.RGBAFormat;
             const depthTexture = loader.load('depth.png');
 
             const sixDofViewer = new Viewer(colorTexture, depthTexture, {
-                'radius' : 7,
                 'density': 1024,
                 'style': Style.POINTS,
             });
